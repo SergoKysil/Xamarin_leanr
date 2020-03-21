@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Xamarin_leanr.Data;
 using Xamarin_leanr.Model;
 
 namespace Xamarin_leanr.Services
 {
-    class ContactRepository : IContactRepository
+    public class ContactRepository : IContactRepository
     {
 
         DataFunctions _dataFunctions;
