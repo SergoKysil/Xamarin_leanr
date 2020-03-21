@@ -10,7 +10,7 @@ using Xamarin_leanr.Services;
 
 namespace Xamarin_leanr.ViewModels
 {
-    public class BaseContactViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
     {
 
         public Contact _contact;
@@ -18,6 +18,17 @@ namespace Xamarin_leanr.ViewModels
         public INavigation _navigation;
         public IValidator _contactValidator;
         public IContactRepository _contactRepository;
+
+        string title = null;
+
+        public string Title
+        {
+            get => title;
+            set
+            {
+                SetProperty(ref title, value);
+            }
+        }
 
 
         public string ContactName
@@ -101,9 +112,34 @@ namespace Xamarin_leanr.ViewModels
             }
         }
 
+        List<Model.MenuItem> _menuList;
+
+        public List<Model.MenuItem> MenuList
+        {
+            get => _menuList;
+            set
+            {
+                _menuList = value;
+                NotifyPropertyChanged("MenuList");
+            }
+        }
+
 
         #region INotifyPropertyChanged    
         public event PropertyChangedEventHandler PropertyChanged;
+
+        protected bool SetProperty<T>(ref T backingStore, T value,
+            [CallerMemberName]string propertyName = "",
+            Action onChanged = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(backingStore, value))
+                return false;
+
+            backingStore = value;
+            onChanged?.Invoke();
+            NotifyPropertyChanged(propertyName);
+            return true;
+        }
         protected void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
