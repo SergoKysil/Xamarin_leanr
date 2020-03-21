@@ -1,5 +1,5 @@
 ﻿using SQLite;
-
+using System;
 
 namespace Xamarin_leanr.Model
 {
@@ -17,7 +17,7 @@ namespace Xamarin_leanr.Model
        
         [NotNull]
         public string Gender { get; set; }
-        public string DateOfBirthday { get; set; }
+        public DateTime DateOfBirthday { get; set; }
         
         public string Address { get; set; }
         
