@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="clr-namespace:Xamarin_leanr.ViewModels"
              mc:Ignorable="d"
-             x:Class="Xamarin_leanr.VIews.AboutPage">
+             x:Class="Xamarin_leanr.Views.AboutView.AboutPage">
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
@@ -35,7 +35,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="AppName" FontAttributes="Bold" FontSize="22" />
+                                <Span Text="Xamarin_learn" FontAttributes="Bold" FontSize="22" />
                                 <Span Text=" " />
                                 <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
                             </FormattedString.Spans>
@@ -67,6 +67,27 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="All rights reserved."/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                <Label VerticalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="49Corp." FontAttributes="Bold" FontSize="16"/>
+                                <Span Text=" "/>
+                                <Span Text="(SKisluy)" FontSize="16"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
                 <Button Margin="0,10,0,0" Text="About Xamarin"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"

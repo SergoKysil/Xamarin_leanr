@@ -13,24 +13,15 @@ namespace Xamarin_leanr.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
 
-        public Contact _contact;
+       
 
         public INavigation _navigation;
         public IValidator _contactValidator;
         public IContactRepository _contactRepository;
 
-        string title = null;
 
-        public string Title
-        {
-            get => title;
-            set
-            {
-                SetProperty(ref title, value);
-            }
-        }
-
-
+        #region Contact
+        public Contact _contact;
         public string ContactName
         {
             get => _contact.ContactName;
@@ -111,19 +102,9 @@ namespace Xamarin_leanr.ViewModels
                 NotifyPropertyChanged("ContactList");
             }
         }
+        #endregion
 
-        List<Model.MenuItem> _menuList;
-
-        public List<Model.MenuItem> MenuList
-        {
-            get => _menuList;
-            set
-            {
-                _menuList = value;
-                NotifyPropertyChanged("MenuList");
-            }
-        }
-
+     
 
         #region INotifyPropertyChanged    
         public event PropertyChangedEventHandler PropertyChanged;

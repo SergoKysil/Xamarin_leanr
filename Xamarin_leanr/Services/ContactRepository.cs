@@ -7,7 +7,7 @@ namespace Xamarin_leanr.Services
     public class ContactRepository : IContactRepository
     {
 
-        DataFunctions _dataFunctions;
+        readonly DataFunctions _dataFunctions;
         public ContactRepository()
         {
             _dataFunctions = new DataFunctions();

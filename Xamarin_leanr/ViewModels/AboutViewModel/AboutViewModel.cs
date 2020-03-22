@@ -11,7 +11,6 @@ namespace Xamarin_leanr.ViewModels
         public ICommand OpenGitCommand { get; }
         public AboutViewModel()
         {
-            Title = "About";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
             OpenGitCommand = new Command(async () => await Browser.OpenAsync("https://github.com/SergoKysil"));
         }
