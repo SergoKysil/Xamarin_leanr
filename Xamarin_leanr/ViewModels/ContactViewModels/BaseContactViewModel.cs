@@ -1,21 +1,14 @@
 ﻿using FluentValidation;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Text;
-using Xamarin.Forms;
 using Xamarin_leanr.Model;
 using Xamarin_leanr.Services;
 
-namespace Xamarin_leanr.ViewModels
+namespace Xamarin_leanr.ViewModels.ContactViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseContactViewModel : BaseViewModel
     {
 
-       
-
-        public INavigation _navigation;
         public IValidator _contactValidator;
         public IContactRepository _contactRepository;
 
@@ -101,29 +94,6 @@ namespace Xamarin_leanr.ViewModels
                 _contactList = value;
                 NotifyPropertyChanged("ContactList");
             }
-        }
-        #endregion
-
-     
-
-        #region INotifyPropertyChanged    
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName]string propertyName = "",
-            Action onChanged = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(backingStore, value))
-                return false;
-
-            backingStore = value;
-            onChanged?.Invoke();
-            NotifyPropertyChanged(propertyName);
-            return true;
-        }
-        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
     }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin_leanr.Model;
@@ -10,7 +7,7 @@ using Xamarin_leanr.Validator;
 
 namespace Xamarin_leanr.ViewModels.ContactViewModels
 {
-    public class DetailsContactViewModel : BaseViewModel
+    public class DetailsContactViewModel : BaseContactViewModel
     {
 
         public ICommand UpdateContactCommand { get; private set; }

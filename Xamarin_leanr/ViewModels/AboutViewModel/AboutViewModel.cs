@@ -1,7 +1,9 @@
 ﻿using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-
+/// <summary>
+/// Using to work with AboutView
+/// </summary>
 namespace Xamarin_leanr.ViewModels
 {
     public class AboutViewModel : BaseViewModel

@@ -2,6 +2,10 @@
 using FluentValidation.Validators;
 using Xamarin_leanr.Model;
 
+/// <summary>
+/// Using for validate some entry
+/// </summary>
+
 namespace Xamarin_leanr.Validator
 {
     class ContactValidator : AbstractValidator<Contact>

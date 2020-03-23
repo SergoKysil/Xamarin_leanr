@@ -17,7 +17,9 @@ namespace Xamarin_leanr.Data
             connection.CreateTable<Contact>();
         }
 
-         //Get all Contacts from data
+
+        #region ContactDataDunctions
+        //Get all Contacts from data
         public List<Contact> GetAllContacts()
         {
             return (from data in connection.Table<Contact>() select data).ToList();
@@ -52,7 +54,9 @@ namespace Xamarin_leanr.Data
         {
             connection.Update(updatedContact);
         }
-            
+        #endregion
+
+
 
     }
 }

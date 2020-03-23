@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin_leanr.Model;
@@ -10,7 +7,7 @@ using Xamarin_leanr.Views.ContactViews;
 
 namespace Xamarin_leanr.ViewModels.ContactViewModels
 {
-    public class ContactListViewModel : BaseViewModel
+    public class ContactListViewModel : BaseContactViewModel
     {
         public ContactListViewModel(INavigation navigation)
         {
