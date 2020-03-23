@@ -34,5 +34,10 @@ namespace Xamarin_leanr.Services.ToDoRepo
         {
             return _dataFunctions.GetToDo(toDoId);
         }
+
+        public void UpdateToDo(ToDo toDo)
+        {
+            _dataFunctions.UpdateToDo(toDo);
+        }
     }
 }

@@ -89,7 +89,11 @@ namespace Xamarin_leanr.Data
             connection.Insert(newToDo);
         }
 
-       
+        //Update ToDo from data
+        public void UpdateToDo(ToDo updatedToDo)
+        {
+            connection.Update(updatedToDo);
+        }
         #endregion
 
 

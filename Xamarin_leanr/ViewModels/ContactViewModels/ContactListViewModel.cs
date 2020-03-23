@@ -36,7 +36,7 @@ namespace Xamarin_leanr.ViewModels.ContactViewModels
             if (isUserAccept)
             {
                 _contactRepository.DeleteAllContacts();
-                await _navigation.PushAsync(new AddContactView());
+                await ShowAddContact();
             }
         }
 

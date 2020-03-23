@@ -17,5 +17,7 @@ namespace Xamarin_leanr.Services.ToDoRepo
 
         void AddNewToDo(ToDo toDo);
 
+        void UpdateToDo(ToDo toDo);
+
     }
 }
