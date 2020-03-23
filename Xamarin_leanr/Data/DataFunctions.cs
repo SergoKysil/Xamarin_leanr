@@ -75,6 +75,12 @@ namespace Xamarin_leanr.Data
         public void DeleteAllToDos()
         {
             connection.DeleteAll<ToDo>();
+        } 
+        
+        //Delete one of ToDO from data
+        public void DeleteToDo(int id)
+        {
+            connection.Delete<ToDo>(id);
         }
 
         //Add new ToDo to data
@@ -83,12 +89,7 @@ namespace Xamarin_leanr.Data
             connection.Insert(newToDo);
         }
 
-        //Delete one of ToDO from data
-        public void DeleteToDo(int id)
-        {
-            connection.Delete<ToDo>(id);
-        }
-
+       
         #endregion
 
 

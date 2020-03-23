@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin_leanr.Model;
-using Xamarin_leanr.Services;
+using Xamarin_leanr.Services.ContactRepo;
 using Xamarin_leanr.Validator;
 using Xamarin_leanr.Views.ContactViews;
 

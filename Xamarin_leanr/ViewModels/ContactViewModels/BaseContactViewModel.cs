@@ -2,7 +2,8 @@
 using System;
 using System.Collections.Generic;
 using Xamarin_leanr.Model;
-using Xamarin_leanr.Services;
+using Xamarin_leanr.Services.ContactRepo;
+using Xamarin_leanr.ViewModels.Base;
 
 namespace Xamarin_leanr.ViewModels.ContactViewModels
 {

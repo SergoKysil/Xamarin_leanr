@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xamarin_leanr.Model;
 
-namespace Xamarin_leanr.Services
+namespace Xamarin_leanr.Services.ContactRepo
 {
     public interface IContactRepository
     {

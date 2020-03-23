@@ -2,7 +2,7 @@
 using Xamarin_leanr.Data;
 using Xamarin_leanr.Model;
 
-namespace Xamarin_leanr.Services
+namespace Xamarin_leanr.Services.ContactRepo
 {
     public class ContactRepository : IContactRepository
     {
