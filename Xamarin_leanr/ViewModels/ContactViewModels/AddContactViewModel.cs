@@ -11,7 +11,7 @@ using Xamarin_leanr.Views.ContactViews;
 
 namespace Xamarin_leanr.ViewModels.ContactViewModels
 {
-    class AddContactViewModel : BaseViewModel
+    public class AddContactViewModel : BaseViewModel
     {
         public ICommand AddContactCommand { get; private set; }
         public ICommand ViewAllContactsCommand { get; private set; }

@@ -63,7 +63,7 @@ namespace Xamarin_leanr.ViewModels.ContactViewModels
                 {
                     _selectedContact = value;
                     NotifyPropertyChanged("SelectedContact");
-                    
+                    ShowContactDetails(value.ID);
                 }
             }
         }
