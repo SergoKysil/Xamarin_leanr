@@ -9,8 +9,9 @@ namespace Xamarin_leanr.Validator
         public ContactValidator()
         {
             RuleFor(c => c.ContactName).Must(n => ValidateString(n)).WithMessage("Ім'я контакту повинно бути заповненим!");
-            RuleFor(c => c.ContactSurname).Must(n => ValidateString(n)).WithMessage("Прізвище контакту повинно бути заповненим!");
-            RuleFor(c => c.Email).EmailAddress(EmailValidationMode.Net4xRegex);
+            RuleFor(c => c.ContactSurname).Must(s => ValidateString(s)).WithMessage("Прізвище контакту повинно бути заповненим!");
+            RuleFor(c => c.Email).EmailAddress(EmailValidationMode.Net4xRegex).WithMessage("Неправильний тип E-mail!");
+            RuleFor(c => c.Gender).Must(g => ValidateString(g)).WithMessage("Стать повинна бути заповнена!");
             RuleFor(c => c.MobileNumber).NotNull().Length(10);
         }
 

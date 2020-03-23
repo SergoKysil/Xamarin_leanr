@@ -7,13 +7,13 @@
              x:Class="Xamarin_leanr.Views.ContactViews.ContactDetailView">
     <StackLayout Spacing="1">
         <StackLayout Orientation="Horizontal">
-            <Entry x:Name="txtContactName" Text="{Binding ContactName}" HeightRequest="50" BackgroundColor="White" Placeholder="Contact Name" HorizontalOptions="FillAndExpand"/>
-            <Entry x:Name="txtContactName" Text="{Binding ContactSurname}" HeightRequest="50" BackgroundColor="White" Placeholder="Contact Surname" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtContactName" Text="{Binding ContactName}" HeightRequest="50" BackgroundColor="White" Placeholder="Ім'я" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtContactSurname" Text="{Binding ContactSurname}" HeightRequest="50" BackgroundColor="White" Placeholder="Прізвище" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
-        <Entry  x:Name="txtMobileNumber" Keyboard="Telephone" Text="{Binding MobileNumber}" BackgroundColor="White" HeightRequest="50" Placeholder="Mobile Number" HorizontalOptions="FillAndExpand"/>
+        <Entry  x:Name="txtMobileNumber" Keyboard="Telephone" Text="{Binding MobileNumber}" BackgroundColor="White" HeightRequest="50" Placeholder="Номер телефону" HorizontalOptions="FillAndExpand"/>
         <StackLayout Orientation="Horizontal">
             <DatePicker x:Name="DatePicerDateOfBirthday" Date="{Binding DateOfBirthday}" BackgroundColor="White" HeightRequest="50" HorizontalOptions="FillAndExpand"/>
-            <Picker x:Name="GenderPicker" SelectedItem="{Binding Gender}" Title="Gender" BackgroundColor="White" HeightRequest="50" HorizontalOptions="FillAndExpand">
+            <Picker x:Name="GenderPicker" SelectedItem="{Binding Gender}" Title="Стать" BackgroundColor="White" HeightRequest="50" HorizontalOptions="FillAndExpand">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Чоловіча</x:String>
@@ -22,7 +22,7 @@
                 </Picker.ItemsSource>
             </Picker>
         </StackLayout>
-        <Entry x:Name="txtAddress" Text="{Binding Email}" BackgroundColor="White"  HeightRequest="50" Placeholder="Email"  HorizontalOptions="FillAndExpand"/>
-        <Entry x:Name="txtAddress" Text="{Binding Address}" BackgroundColor="White"  HeightRequest="50" Placeholder="Address"  HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name="txtEmail" Text="{Binding Email}" BackgroundColor="White"  HeightRequest="50" Placeholder="example@ex.com"  HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name="txtAddress" Text="{Binding Address}" BackgroundColor="White"  HeightRequest="50" Placeholder="Адреса"  HorizontalOptions="FillAndExpand"/>
     </StackLayout>
 </ContentView>

@@ -7,8 +7,8 @@
              x:Class="Xamarin_leanr.Views.ContactViews.AddContactView">
     <StackLayout Padding="20" Spacing="12">
         <local:ContactDetailView />
-        <Button x:Name="SubmitButton" Command="{Binding AddContactCommand}" BorderRadius="0" Text="Save Contact" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5"/>
-        <Label Text="View All Contacts" IsVisible="{Binding IsViewAll}" x:Name="ViewLbl" TextColor="Black" HorizontalOptions="EndAndExpand" FontSize="15">
+        <Button x:Name="SubmitButton" Command="{Binding AddContactCommand}" BorderRadius="0" Text="Зберегти" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5"/>
+        <Label Text="Переглянути усі контакти" IsVisible="{Binding IsViewAll}" x:Name="ViewLbl" TextColor="Black" HorizontalOptions="EndAndExpand" FontSize="15">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ViewAllContactsCommand}" NumberOfTapsRequired="1" />
             </Label.GestureRecognizers>

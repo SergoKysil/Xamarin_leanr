@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Text="New Contact" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" BorderRadius="0" HeightRequest="40" BorderColor="Black" BackgroundColor="Transparent" BorderWidth="1"  TextColor="Black"  Command="{Binding AddCommand}" />
+            <Button Text="Новий контакт" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" BorderRadius="0" HeightRequest="40" BorderColor="Black" BackgroundColor="Transparent" BorderWidth="1"  TextColor="Black"  Command="{Binding AddCommand}" />
         </Grid>
         <ListView x:Name="ContactListView" HasUnevenRows="true" Grid.Row="1" SeparatorColor="Black" ItemsSource="{Binding ContactList}"
          SelectedItem="{Binding SelectedContact, Mode=TwoWay}">
@@ -42,6 +42,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Text="Delete All Contacts" Grid.Row="2" BorderRadius="0" VerticalOptions="EndAndExpand" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5" Command="{Binding DeleteAllContactsCommand}" />
+        <Button Text="Видалити всі контакти" Grid.Row="2" BorderRadius="0" VerticalOptions="EndAndExpand" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5" Command="{Binding DeleteAllContactsCommand}" />
     </Grid>
 </ContentPage>

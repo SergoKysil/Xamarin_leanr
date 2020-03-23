@@ -43,7 +43,7 @@ namespace Xamarin_leanr.ViewModels.ContactViewModels
 
             if (validationResults.IsValid)
             {
-                bool isUserAccept = await Application.Current.MainPage.DisplayAlert("Деталі Контакту", "Оновити дані?", "OK", "Скасувати");
+                bool isUserAccept = await Application.Current.MainPage.DisplayAlert("Дані контакту", "Оновити дані?", "OK", "Скасувати");
                 if (isUserAccept)
                 {
                     _contactRepository.UpdateContact(_contact);
@@ -58,7 +58,7 @@ namespace Xamarin_leanr.ViewModels.ContactViewModels
 
         async Task DeleteContact()
         {
-            bool isUserAccept = await Application.Current.MainPage.DisplayAlert("Contact Details", "Delete Contact Details", "OK", "Cancel");
+            bool isUserAccept = await Application.Current.MainPage.DisplayAlert("Дані контаку", "Видалити контакт?", "OK", "Скасувати");
             if (isUserAccept)
             {
                 _contactRepository.DeleteContact(_contact.ID);

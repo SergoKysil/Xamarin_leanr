@@ -42,13 +42,13 @@ namespace Xamarin_leanr.ViewModels.ContactViewModels
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Add Contact", validationResults.Errors[0].ErrorMessage, "Ok");
+                await Application.Current.MainPage.DisplayAlert("Додавання контакту", validationResults.Errors[0].ErrorMessage, "Ok");
             }
         }
 
         async Task ShowContactList()
         {
-            await _navigation.PushAsync(new ContactList());
+            await _navigation.PopAsync();
         }
 
         public bool IsViewAll => _contactRepository.GetAllContacts().Count > 0 ? true : false;
