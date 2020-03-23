@@ -8,13 +8,14 @@ namespace Xamarin_leanr.Data
 {
     public class DataFunctions
     {
-        public const string DBName = "Contacts.db";
+        public const string DBName = "Xamarin_learn.db";
         static SQLiteConnection connection;
 
         public DataFunctions()
         {
             connection = DependencyService.Get<ISQLite>().GetConnection();
             connection.CreateTable<Contact>();
+            connection.CreateTable<ToDo>();
         }
 
 
@@ -28,7 +29,7 @@ namespace Xamarin_leanr.Data
         //Get one of contact from data
         public Contact GetContact(int id)
         {
-            return connection.Table<Contact>().FirstOrDefault(t => t.ID == id);
+            return connection.Table<Contact>().FirstOrDefault(c => c.ID == id);
         }
 
         //Delete all contacts from data
@@ -54,6 +55,40 @@ namespace Xamarin_leanr.Data
         {
             connection.Update(updatedContact);
         }
+        #endregion
+
+
+        #region ToDoDataFunctions
+        //Get all ToDo from data
+        public List<ToDo> GetAllToDos()
+        {
+            return (from data in connection.Table<ToDo>() select data).ToList();
+        }
+
+        //Get one of ToDo from data
+        public ToDo GetToDo(int id)
+        {
+            return connection.Table<ToDo>().FirstOrDefault(t => t.ID == id);
+        }
+
+        //Delete all ToDos from data
+        public void DeleteAllToDos()
+        {
+            connection.DeleteAll<ToDo>();
+        }
+
+        //Add new ToDo to data
+        public void AddNewToDo(ToDo newToDo)
+        {
+            connection.Insert(newToDo);
+        }
+
+        //Delete one of ToDO from data
+        public void DeleteToDo(int id)
+        {
+            connection.Delete<ToDo>(id);
+        }
+
         #endregion
 
 
