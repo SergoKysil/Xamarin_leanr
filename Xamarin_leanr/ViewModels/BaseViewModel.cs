@@ -92,7 +92,7 @@ namespace Xamarin_leanr.ViewModels
         }
 
 
-        List<Contact> _contactList;
+        public List<Contact> _contactList;
         public List<Contact> ContactList
         {
             get => _contactList;

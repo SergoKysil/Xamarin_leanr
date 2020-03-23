@@ -6,22 +6,15 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin_leanr.ViewModels.ContactViewModels;
 
 namespace Xamarin_leanr.Views.ContactViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContactList : ContentPage
+    public partial class AddContactView : ContentPage
     {
-        public ContactList()
+        public AddContactView()
         {
             InitializeComponent();
-            
-        }
-
-        protected override void OnAppearing()
-        {
-            this.BindingContext = new ContactListViewModel(Navigation);
         }
     }
 }
