@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_leanr.Views.ContactViews.ContactDetailView">
+    <StackLayout Spacing="1">
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="txtContactName" Text="{Binding ContactName}" HeightRequest="50" BackgroundColor="White" Placeholder="Contact Name" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtContactName" Text="{Binding ContactSurname}" HeightRequest="50" BackgroundColor="White" Placeholder="Contact Surname" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Entry  x:Name="txtMobileNumber" Keyboard="Telephone" Text="{Binding MobileNumber}" BackgroundColor="White" HeightRequest="50" Placeholder="Mobile Number" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal">
+            <DatePicker x:Name="DatePicerDateOfBirthday" Date="{Binding DateOfBirthday}" BackgroundColor="White" HeightRequest="50" HorizontalOptions="FillAndExpand"/>
+            <Picker x:Name="GenderPicker" SelectedItem="{Binding Gender}" Title="Gender" BackgroundColor="White" HeightRequest="50" HorizontalOptions="FillAndExpand">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Чоловіча</x:String>
+                        <x:String>Жіноча</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+        <Entry x:Name="txtAddress" Text="{Binding Email}" BackgroundColor="White"  HeightRequest="50" Placeholder="Email"  HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name="txtAddress" Text="{Binding Address}" BackgroundColor="White"  HeightRequest="50" Placeholder="Address"  HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+</ContentView>
