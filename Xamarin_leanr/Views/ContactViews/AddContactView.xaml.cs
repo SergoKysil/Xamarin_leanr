@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin_leanr.ViewModels.ContactViewModels;
 
 namespace Xamarin_leanr.Views.ContactViews
 {
@@ -15,6 +16,7 @@ namespace Xamarin_leanr.Views.ContactViews
         public AddContactView()
         {
             InitializeComponent();
+            this.BindingContext = new AddContactViewModel(Navigation);
         }
     }
 }
