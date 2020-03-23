@@ -10,7 +10,7 @@ namespace Xamarin_leanr.Validator
     {
         public ToDoValidator()
         {
-            RuleFor(t => t.Title).Must(n => ValidateString(n)).WithMessage("Головна назва повинна бути заповнена!");
+            RuleFor(t => t.ToDoTitle).Must(n => ValidateString(n)).WithMessage("Головна назва повинна бути заповнена!");
             RuleFor(t => t.Content).Must(n => ValidateString(n)).WithMessage("Додайте опис!");
         }
 
