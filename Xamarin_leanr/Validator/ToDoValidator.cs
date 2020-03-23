@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentValidation;
+﻿using FluentValidation;
 using Xamarin_leanr.Model;
 
 namespace Xamarin_leanr.Validator

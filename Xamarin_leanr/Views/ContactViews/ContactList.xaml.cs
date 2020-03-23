@@ -16,12 +16,8 @@ namespace Xamarin_leanr.Views.ContactViews
         public ContactList()
         {
             InitializeComponent();
-            
-        }
-
-        protected override void OnAppearing()
-        {
             this.BindingContext = new ContactListViewModel(Navigation);
         }
+
     }
 }

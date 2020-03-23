@@ -5,12 +5,14 @@ using Xamarin_leanr.ViewModels.ToDoViewModels;
 namespace Xamarin_leanr.Views.ToDoViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DetailToDoView : ContentPage
+    public partial class ToDoListView : ContentPage
     {
-        public DetailToDoView(int id)
+        public ToDoListView()
         {
             InitializeComponent();
-            this.BindingContext = new DetailsToDoViewModel(Navigation, id);
+            this.BindingContext = new ToDoListVeiwModel(Navigation);
         }
+
+
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Xamarin_leanr.ViewModels.Base;
 using FluentValidation;
 using Xamarin_leanr.Services.ToDoRepo;
