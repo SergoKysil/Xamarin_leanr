@@ -49,7 +49,7 @@ namespace Xamarin_leanr.ViewModels.ContactViewModels
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Add Contact", validationResults.Errors[0].ErrorMessage, "Ok");
+                await Application.Current.MainPage.DisplayAlert("Дані контакту", validationResults.Errors[0].ErrorMessage, "Ok");
             }
         }
 
