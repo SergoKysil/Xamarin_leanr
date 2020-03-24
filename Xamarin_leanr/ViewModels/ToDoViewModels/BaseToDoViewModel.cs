@@ -53,7 +53,7 @@ namespace Xamarin_leanr.ViewModels.ToDoViewModels
             set
             {
                 _todoList = value;
-                NotifyPropertyChanged("ContactList");
+                NotifyPropertyChanged("ToDoList");
             }
         }
 

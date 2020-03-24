@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_leanr.Views.ToDoViews.ToDoDetailView">
+
+
+    <StackLayout Spacing="1">
+        <Entry x:Name="txtToDoTitle" Margin="0,0,0,10" Text="{Binding ToDoTitle}" HeightRequest="64" BackgroundColor="White" Placeholder="Заголовок" FontSize="Title" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+        <Editor x:Name="txtToDoContent" Text="{Binding Content}" HeightRequest="50" BackgroundColor="White" Placeholder="Контент" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+    
+</ContentView>

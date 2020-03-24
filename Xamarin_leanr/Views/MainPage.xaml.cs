@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin_leanr.Model;
-using Xamarin_leanr.ViewModels;
 using Xamarin_leanr.Views.AboutView;
+using Xamarin_leanr.Views.ContactViews;
+using Xamarin_leanr.Views.ToDoViews;
 
 namespace Xamarin_leanr.Views
 {
@@ -21,9 +22,11 @@ namespace Xamarin_leanr.Views
 
             MenuPages = new List<MenuPageItems>
             {
-                new MenuPageItems() { Title = "Contacts", PageType = typeof(Views.ContactViews.ContactList) },
+                new MenuPageItems() { Title = "Contacts", PageType = typeof(ContactList) },
+                new MenuPageItems() { Title = "ToDo", PageType = typeof(ToDoListView) },
                 new MenuPageItems() { Title = "About", PageType = typeof(AboutPage) }
-                    
+                 
+
             };
 
 

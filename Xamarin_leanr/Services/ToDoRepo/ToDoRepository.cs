@@ -8,6 +8,12 @@ namespace Xamarin_leanr.Services.ToDoRepo
     {
 
         readonly DataFunctions _dataFunctions;
+
+        public ToDoRepository()
+        {
+            _dataFunctions = new DataFunctions();
+        }
+
         public void AddNewToDo(ToDo toDo)
         {
             _dataFunctions.AddNewToDo(toDo);

@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Xamarin_leanr.Views.ToDoViews"
              mc:Ignorable="d"
              x:Class="Xamarin_leanr.Views.ToDoViews.AddToDoView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout Padding="20" Spacing="12">
+        <local:ToDoDetailView />
+        <Button x:Name="SubmitButton" Command="{Binding AddToDoCommand}" BorderRadius="0" Text="Зберегти" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5"/>
+        <Label Text="Переглянути усі завдання" IsVisible="{Binding IsViewAll}" x:Name="ViewLbl" TextColor="Black" HorizontalOptions="EndAndExpand" FontSize="15">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ViewAllToDosCommand}" NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+    </StackLayout>
 </ContentPage>
